@@ -1,0 +1,14 @@
+/* IE6Hack */
+
+/* 解决IE6 position:fixed跳变问题 */
+* html, * html body {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+
+/* 解决IE6 position:fixed不兼容问题 */
+* html #menu {
+    position: absolute;
+    bottom: auto;
+    top: expression(100+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+'px');
+}
